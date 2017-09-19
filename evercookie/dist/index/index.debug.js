@@ -3689,15 +3689,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 var fp1 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__mfelibs_base_utils__["a" /* $ */])('#fp1');
+var fp1detail = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__mfelibs_base_utils__["a" /* $ */])('#fp1detail');
 var fp2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__mfelibs_base_utils__["a" /* $ */])('#fp2');
+var fp2detail = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__mfelibs_base_utils__["a" /* $ */])('#fp2detail');
+
 var setFp = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__mfelibs_base_utils__["a" /* $ */])('#setFp');
 
 function init() {
-    __WEBPACK_IMPORTED_MODULE_1__mfelibs_base_tools_evercookie__["a" /* default */].get('fp1', function (data) {
+    __WEBPACK_IMPORTED_MODULE_1__mfelibs_base_tools_evercookie__["a" /* default */].get('fp1', function (data, info) {
         fp1.text(data);
+        for (var i in info) {
+            var details = '';
+            details = i + ': ' + info[i] + '  ';
+            fp1detail.append('<p>' + details + '</p>');
+        }
     });
-    __WEBPACK_IMPORTED_MODULE_1__mfelibs_base_tools_evercookie__["a" /* default */].get('fp2', function (data) {
+    __WEBPACK_IMPORTED_MODULE_1__mfelibs_base_tools_evercookie__["a" /* default */].get('fp2', function (data, info) {
         fp2.text(data);
+        var details = '';
+        for (var i in info) {
+            var _details = '';
+            _details = i + ': ' + info[i] + '  ';
+            fp2detail.append('<p>' + _details + '</p>');
+        }
     });
 }
 
