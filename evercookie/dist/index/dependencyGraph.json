@@ -1,0 +1,1 @@
+[{"entry":"index","dependency":[{"name":"@mfelibs/base-utils","type":"CMD","version":"1.5.3","dependency":[]},{"name":"@mfelibs/base-tools-evercookie","type":"CMD","version":"0.0.4","dependency":[]}]}]
